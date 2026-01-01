@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods of Integration</title>
+    <link rel="stylesheet" href="methods.css">
+    <link rel="stylesheet" href="Homepage.css">
+    <script src="sidebar.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="hheading">MASTERING INTEGRATION - A STUDY GUIDE</h1>
+    </header>
+    <div class="menu-btn" onclick="openSidebar()">=</div>
+    <div id="sidebar" class="sidebar">
+        <span class="close-btn" onclick="closeSidebar()">x</span>
+        <a href="Integration homepage.html" style="text-decoration: none; margin-right: 10px;">Home</a>
+        <a href="about.html" style="text-decoration: none;  margin-right: 10px;">About</a>
+        <a href="contact.html" style="text-decoration: none;">Contact</a>
+
+        <span id="Elements">
+            <ol>
+                <li><a href="intro.html"  style="color: black;">Introduction</a></li>
+                <li><a href="methods.html"  style="color: black;">Methods of Integration</a></li>
+                <li><a href="applications.html" style="color: black;">Applications of Integration</a></li>
+                <li><a href="practice.html" style="color: black;">Practice Problems</a></li>
+                
+            </ol>
+        </span>
+    </div>
+    <div id="overlay" onclick="closeSidebar()"></div>
+    <main>
+        <div id="mmain">
+            <div id="methodheading"><p>Methods of Integration</p></div>
+            <div id="headingcontent"><p>
+               Integration problems are solved using different methods depending on the form of the given function. The most commonly used methods in Class 12 mathematics are explained below with definitions, steps, and examples.
+            </p></div>
+            <div id="div1" class="box">
+                <h3><a href="substitution method.html" style="text-decoration: none; color: black;font-size: 20px;">1. Substitution Method</a></h3>
+                <p>
+                    The substitution method is used when the integrand contains a composite function. A part of the function is substituted by a new variable to simplify the integral.
+                    This method works on the reverse chain rule of differentiation.<br><br>
+                    Steps: <br><br>
+                    1. Choose a part of the integrand and substitute it by a new variable (say ).<br>
+                    2. Differentiate the chosen part to find .<br>
+                    3. Replace the original expression in terms of and du.<br>
+                    4. Integrate and substitute back the original variable.<br><br>
+                    Example: <br><br>
+
+                    ∫ 2x cos(x^2)dx<br>
+
+                    Let<br>
+
+                    u = x^2 -> du = 2x\,dx<br>
+
+                    ∫ cos u du = sin u + C<br>
+
+                    Substitute back:<br>
+
+                    (x^2) + C<br><br>
+                    When to Use: <br><br>
+
+Composite functions<br>
+
+Expressions like <br><br>
+
+                </p>
+            </div>
+            <div class="methodimg"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20230515123759/Integration-by-Substitution.webp" alt=""></div>
+            <div id="div2" class="box">
+                <h3><a href="integration by parts.html" style="text-decoration: none; color: black;font-size: 20px;">2. Integration by Parts</a></h3>
+                <p>
+                    Integration by parts is used to integrate the product of two functions. It is based on the product rule of differentiation.<br><br>
+                    Formula:<br><br>
+                    ∫u.dv = uv - ∫v .du<br><br>
+                    Steps: <br><br>
+                    1. Select u and dv from the given expression.<br>
+                    2. Differentiate u to get du.<br>
+                    3. Integrate du to get v.<br>
+                    4. Apply the formula. <br><br>
+                    ILATE Rule (for choosing u):<br><br>
+                    I - Inverse trigonometric<br>
+                    L - Logarithmic<br>
+                    A - Algebraic<br>
+                    T - Trigonometric<br>
+                    E - Exponential<br><br>
+                    Example: <br><br>
+                    ∫x(e^x).dx<br>
+                    Let<br>
+                    u = x,  dv = (e^x).dx<br>
+                    du = dx,  v=(e^x)<br>
+                    Apply formula:<br>
+                    x(e^x) - ∫(e^x).dx = x(e^x) - (e^x) + C<br><br>
+                    When to use:<br><br>
+                    <ul>
+                        <li>Product of algebraic and exponential/trigonometric functions.</li>
+                        <li>Expressions like x sinx, x(e^x)</li>
+                    </ul>
+            </div>
+            <div class="methodimg"><img src="https://matterofmath.com/wp-content/uploads/2021/06/Integration-by-Parts-Formula-Explained-1.jpg" alt=""></div>
+            <div id="div3" class="box">
+                <h3><a href="partial fraction decomposition.html" style="text-decoration: none; color: black;font-size: 20px;">3. Partial Fraction Decomposition</a></h3>
+                <p>
+                    Partial fractions method is used to integrate rational functions, where the numerator and denominator are polynomials.<br>The rational expression is broken into simpler fractions which are easier to integrate.<br><br>
+                    Steps: <br><br>
+                    <ol>
+                        <li>Ensure degree of numerator < degree of denomerator.</li>
+                        <li>Factorize the denominator completely.</li>
+                        <li>Decompose into partial fraction.</li>
+                        <li>Integrate each term spearately.</li>
+                    </ol>
+                    When to use: <br><br>
+                    <ul>
+                        <li>Rational functions</li>
+
+                        <li>Algebraic fractions</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="methodimg">
+                <img src="https://cdn1.byjus.com/wp-content/uploads/2021/12/integration-by-partial-fractions.png" alt="">
+            </div>
+            <div id="div4" class="box">
+                <h3><a href="trigonometric integrals.html" style="text-decoration: none; color: black;font-size: 20px;">4. Trigonometric Integrals</a></h3>
+                <p>
+                    Basic trigonometric integrals are those whose results are directly known and do not require any special method.<br><br>
+                    When to use: <br><br>
+                    <ul>
+                        <li>When integrand matches a standard formula</li>
+                        <li>No simplification required</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="methodimg"><img src="https://image4.slideserve.com/317443/trigonometric-integrals-l.jpg" alt=""></div>
+            <div id="div5" class="box">
+                <h3><a href="numerical integration.html" style="text-decoration: none; color: black;font-size: 20px;">5. Numerical Integration</a></h3>
+                <p>
+                    When an integral cannot be solved analytically, numerical methods such as the Trapezoidal Rule or Simpson's Rule can be used to approximate the value of the integral.<br><br>
+                    Methods:<br><br>
+                    <ul>
+                        <li>Trapezoidal Rule: Approximates area using trapezoids</li>
+                        <li>Simpson's Rule: Uses parabolic segments for better accuracy</li>
+                    </ul>
+                    When to use: <br><br>
+                    <ul>
+                        <li>When analytical solutions are not possible</li>
+                        <li>Complex or transcendental functions</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="methodimg"><img src="https://www.value-at-risk.net/wp-content/uploads/exhibits/exhibit_2_30.png" alt="">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20241231110823198597/trapezoid_rule.webp" alt="">
+                <img style="border: 0px;" src="https://mathsathome.com/wp-content/uploads/2023/04/simpsons-rule-for-calculating-area.png" alt="">
+            </div>
+        </div>
+        </div>
+    </main>
+</body>
+</html>
